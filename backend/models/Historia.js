@@ -20,7 +20,16 @@ const historiaSchema = mongoose.Schema({
     relacionG: { // relación con la gastronomía
         type: String,
         required: true        
+    },
+    puebloComunidad: {
+        type: String,
+        required: true
+    },
+    referente:{
+        type: String,
+        required: true
     }
+
 //Al armar la estructura del backend, se lanza desde postman. Para que no se muestre la versionkey o una version
 
 }, {versionkey:false});

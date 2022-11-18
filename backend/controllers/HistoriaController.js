@@ -1,6 +1,5 @@
 //declaro el modelo 
 const Historia = require('../models/Historia.js');
-const Administrador = require('../models/Historia.js');
 //(el método lo llamo en una ruta determninada)
 //función para integrar el CRUD y mostrar los admin
 exports.mostrarHistorias = async (req, res) => {
@@ -72,7 +71,7 @@ exports.eliminarHistoria = async (req, res) => {
 exports.actualizarHistoria = async (req, res) => {
     try {
         //vamos a buscar lo que está almacenado en estas variables
-        const { titulo, argumento, personajes, relacionG} = req.body;
+        const { titulo, argumento, personajes, relacionG, puebloComunidad, referente} = req.body;
         //trae el historia por id
         let historias = await Historia.findById(req.params.id);
         //validar si existe o no lo que vamos a buscar
@@ -83,6 +82,8 @@ exports.actualizarHistoria = async (req, res) => {
         historias.argumento = argumento;
         historias.personajes = personajes;
         historias.relacionG = relacionG;
+        historias.puebloComunidad = puebloComunidad;
+        historias.referente = referente;
         
         //toca esperar a que se haga conexión a las bases de datos y luego se le envian los datos por id. (new:true) que nos va a modificar los campos
         historias = await Historia.findByIdAndUpdate({ _id: req.params.id }, historias, { new: true });
