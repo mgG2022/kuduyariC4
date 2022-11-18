@@ -16,9 +16,8 @@ app.use(cors());
 
 app.use(express.json());
 app.use('/api/administradores', require ('../routes/administrador.js'));
-//para añadir otros modulos:
-//app.use('/api/recetas', require ('../routes/receta.js'));
 app.use('/api/historias', require ('../routes/historia.js'));
+app.use('/api/receta', require ('../routes/receta'));
 
 
 
