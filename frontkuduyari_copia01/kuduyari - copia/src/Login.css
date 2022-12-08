@@ -1,0 +1,17 @@
+
+
+.login__logo {
+    height: 15vmin;
+margin-bottom: 2rem;
+}
+
+
+.h-80 {
+    height: 80% !important;
+    margin: 3rem 1rem 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
