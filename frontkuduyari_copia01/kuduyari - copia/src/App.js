@@ -30,6 +30,7 @@ import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import Login from './components/Login.js';
 import Banner from './components/Banner.js';
+import CompInicio from './components/Inicio.js';
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
           
         <BrowserRouter>
         <Routes>
+          
+          <Route path='/inicio/' element={<CompInicio />} />
+
           <Route path='/receta/' element={<CompMostrarReceta />} />
           <Route path='/receta/agregar/' element={<CompAgregarReceta />} />
           <Route path='/receta/editar/:id' element={<CompEditarReceta />} />

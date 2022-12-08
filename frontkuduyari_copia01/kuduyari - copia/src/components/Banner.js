@@ -9,13 +9,12 @@ const Banner = () => {
     return (
 
         <section>
-            <div id="carouselExampleIndicators" className="carousel slide carousel-fade" data-ride="carousel">
-
-                <ol className="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
+            <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
+                <div className="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
 
                 <div className="carousel-inner">
                     <div className="carousel-item active">
@@ -26,7 +25,7 @@ const Banner = () => {
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src={imagen2} className="d-block w-100" alt="Second slide"></img>
+                        <img src={imagen2} className="d-block w-100" alt="Second slide" />
                         <div className="carousel-caption d-none d-md-block">
                             <h5 className="banner__titulo">Administrador</h5>
                             <p>Añade nuevas recetas e historias</p>
@@ -40,30 +39,27 @@ const Banner = () => {
                         </div>
                     </div>
 
-
-
-
                 </div>
-                <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+
+
+
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-
-
-                
-                <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
+                    <span className="visually-hidden">Next</span>
+                </button>
 
-                
+
             </div>
 
 
 
 
 
-        </section>
+        </section >
 
 
 
